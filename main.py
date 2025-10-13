@@ -8,6 +8,7 @@ def check_file():
     if not os.path.exists("image"):
         os.makedirs("image")
 
+
 def get_comics(filename):
     url = "https://xkcd.com/353/info.0.json"
     response = requests.get(url)
@@ -23,7 +24,7 @@ def get_random_comics(random_name):
 
 
 def downloading_random_image(random_name, random_photo):
-    response = requests.get(random_photo['img'])
+    response = requests.get(random_photo["img"])
     response.raise_for_status()
     filename_random = f"comics{random_name}.png"
     with open(f"image/{filename_random}", "wb") as file:
@@ -31,16 +32,15 @@ def downloading_random_image(random_name, random_photo):
 
 
 def downloading_image(get_info, filename):
-    response = requests.get(get_info['img'])
+    response = requests.get(get_info["img"])
     response.raise_for_status()
-
 
     with open(f"image/{filename}", "wb") as file:
         file.write(response.content)
 
 
 def comments_avtor(get_info):
-    print(get_info['alt'])
+    print(get_info["alt"])
 
 
 if __name__ == "__main__":
