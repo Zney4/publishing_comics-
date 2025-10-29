@@ -26,8 +26,6 @@ CHAT_ID=example
 Для того чтоб получить BOT_TOKEN надо обратьтся к @BotFather в телеграмме.
 А для получения CHAT_ID надо обратиться к @LeadConverterToolkitBot.
 
-Чтобы получить апи токен для скрипта нам нужно зарегестрироваться на сайте Super_job и подать заявку на его получения https://api.superjob.ru/?from_refresh=1.
-
 ## Примеры запуска кода
 ```
 telegram_bot.py
